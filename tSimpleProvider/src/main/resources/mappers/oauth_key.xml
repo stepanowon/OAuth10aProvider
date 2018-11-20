@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="oAuthKey">
+
+  <insert id="create" parameterType="OAuthKeyVO">
+	insert into tbl_oauth_key (consumerkey, consumerSecret, userid, oauthtoken, oauthtokensecret, callbackurl, appname) 
+	values (#{consumerKey}, #{consumerSecret}, #{userId}, #{oauthToken}, #{oauthTokenSecret}, #{callbackUrl}, #{appName})
+  </insert>
+  
+  <delete id="delete" parameterType="java.lang.String">
+    delete tbl_oauth_key where consumerkey = #{consumerKey}
+  </delete>
+  
+  <select id="selectByConsumerKey" parameterType="java.lang.String" resultType="OAuthKeyVO">
+    select consumerkey, consumerSecret, userid, oauthToken, oAuthTokenSecret, 
+            to_char(regdate,'yyyy-mm-dd') AS regdate, 
+            callbackUrl, appName 
+    from tbl_oauth_key 
+    where consumerkey = #{consumerKey}
+  </select>
+  
+  <select id="selectByUserID" parameterType="java.lang.String" resultType="OAuthKeyVO">
+    select consumerkey, consumerSecret, userid, oauthToken, oAuthTokenSecret, 
+            to_char(regdate,'yyyy-mm-dd HH24:MI:SS') AS regdate, 
+            callbackUrl, appName 
+    from tbl_oauth_key 
+    where userid = #{userId}
+  </select>
+
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="requestToken">
+  <insert id="create" parameterType="RequestTokenVO">
+	insert into tbl_request_token (requesttoken, requesttokensecret,  consumerkey, verifier, callback, userno) 
+	values (#{requestToken}, #{requestTokenSecret}, #{consumerKey}, #{verifier}, #{callback}, -1)
+  </insert>
+  
+  <update id="updateUserNo" parameterType="RequestTokenVO">
+  	update tbl_request_token
+  	set userno=#{userNo}
+  	where requestToken=#{requestToken}
+  </update>
+  
+  <delete id="delete" parameterType="java.lang.String">
+    delete tbl_request_token where requesttoken = #{requestToken}
+  </delete>
+  
+  <select id="select" parameterType="java.lang.String" resultType="RequestTokenVO">
+    select requesttoken, requesttokensecret, r.consumerkey, verifier,
+         to_char(r.regdate,'yyyy-mm-dd HH24:MI:SS') AS regdate, c.appName, r.callback, userNo
+    from tbl_request_token r, tbl_consumer c 
+    where r.consumerKey = c.consumerKey and requesttoken = #{requestToken}
+  </select>
+  
+  <!-- Request Token이 10분 이상 방치되면 삭제하도록 -->
+  <delete id="deleteExpired">
+    delete tbl_request_token where (sysdate - regdate)*24*60 > 10
+  </delete>
+
+</mapper>

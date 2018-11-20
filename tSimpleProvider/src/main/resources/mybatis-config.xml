@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <typeAliases>
+        <typeAlias type="com.sds.testprovider.model.UsersVO" alias="UsersVO" />
+        <typeAlias type="com.sds.testprovider.model.AccessTokenVO" alias="AccessTokenVO" />
+        <typeAlias type="com.sds.testprovider.model.ConsumerVO" alias="ConsumerVO" />
+        <typeAlias type="com.sds.testprovider.model.OAuthKeyVO" alias="OAuthKeyVO" />
+        <typeAlias type="com.sds.testprovider.model.RequestTokenVO" alias="RequestTokenVO" />
+    </typeAliases>
+
+    <mappers>
+    	<mapper resource="mappers/consumer.xml" />
+    	<mapper resource="mappers/oauth_key.xml" />
+    	<mapper resource="mappers/request_token.xml" />
+    	<mapper resource="mappers/users.xml" />
+    </mappers>
+ 
+</configuration>
+
