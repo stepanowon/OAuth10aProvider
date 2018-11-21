@@ -1,7 +1,7 @@
 package org.thinker.oauth.controller;
 
 public class Setup {
-	 //Æ®À§ÅÍ
+	 //for Twitter 
 //	 public static final String CONSUMER_KEY =
 //			 "[Consumer Key]";
 //	 public static final String CONSUMER_SECRET =
@@ -17,7 +17,7 @@ public class Setup {
 //	 public static final String RESOURCE_URL = 
 //			 "https://api.twitter.com/1.1/statuses/home_timeline.json";
 	 
-	 //³»ÀÎÁõ¼­¹ö
+	 //for tSimpleProvider
 	 public static final String CONSUMER_KEY =
 			 "06c94776-3b5a-48a3-8591-71c35103a9a5";
 	 public static final String CONSUMER_SECRET =
