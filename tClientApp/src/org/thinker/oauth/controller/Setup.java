@@ -1,11 +1,11 @@
 package org.thinker.oauth.controller;
 
 public class Setup {
-	 //Æ®À§ÅÍ
+	 //Ã†Â®Ã€Â§Ã…Ã
 //	 public static final String CONSUMER_KEY =
-//			 "yKWgfv5G1EE09fqzxoqEWTrry";
+//			 "[Consumer Key]";
 //	 public static final String CONSUMER_SECRET =
-//			 "2tm7HBd7uQJcHNpYVDWxzs90VcvqPyKG5NiQKiyN0ln6VkDhta";
+//			 "[Consumer Secret]";
 //	 public static final String CALLBACK_URL =
 //			 "http://jcornor.com:8000/tClientApp/callback";
 //	 public static final String REQUEST_TOKEN_URL =
@@ -17,7 +17,7 @@ public class Setup {
 //	 public static final String RESOURCE_URL = 
 //			 "https://api.twitter.com/1.1/statuses/home_timeline.json";
 	 
-	 //³»ÀÎÁõ¼­¹ö
+	 //Â³Â»Ã€ÃÃÃµÂ¼Â­Â¹Ã¶
 	 public static final String CONSUMER_KEY =
 			 "06c94776-3b5a-48a3-8591-71c35103a9a5";
 	 public static final String CONSUMER_SECRET =
