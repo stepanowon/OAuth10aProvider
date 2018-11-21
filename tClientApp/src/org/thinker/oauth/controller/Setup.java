@@ -19,9 +19,9 @@ public class Setup {
 	 
 	 //for tSimpleProvider
 	 public static final String CONSUMER_KEY =
-			 "06c94776-3b5a-48a3-8591-71c35103a9a5";
+			 "[Consumer Key]";
 	 public static final String CONSUMER_SECRET =
-			 "21a7e84b66d33c95b411bee0db5f60b4";
+			 "[Consumer Secret]";
 	 public static final String CALLBACK_URL =
 			 "http://jcornor.com:8000/tClientApp/callback";
 	 public static final String REQUEST_TOKEN_URL =
