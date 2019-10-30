@@ -1,6 +1,6 @@
 # OAuth10aProvider
 * OAuth 1.0a Service Provider + Consumer Example
-* This Code Can be used for educational purposes only.
+* This Code Can be used for educational purposes
 -------------------------
 ## Provider
 * tSimpleProvider
